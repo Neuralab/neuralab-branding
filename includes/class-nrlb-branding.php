@@ -50,6 +50,7 @@ final class NRLB_Branding {
     $this->define_constants();
     $this->includes();
     $this->init_hooks();
+    $this->update();
   }
 
   /**
@@ -122,6 +123,21 @@ final class NRLB_Branding {
    */
   public function load_textdomain() {
     load_plugin_textdomain( 'nrlb-branding', false, dirname( plugin_basename( NRLB_BRANDING_ROOT_FILE ) ) . '/languages/' );
+  }
+
+  public function update() {
+    $update = Puc_v4_Factory::buildUpdateChecker(
+      'https://bitbucket.org/neuralab/neuralab-branding',
+      NRLB_BRANDING_ROOT_FILE,
+      'nrlb-branding'
+    );
+
+    $update->setAuthentication(
+      [
+        'consumer_key'    => '***REMOVED***',
+        'consumer_secret' => '***REMOVED***',
+      ]
+    );
   }
 
   /**
