@@ -1,3 +1,3 @@
-# Neuralab Branding Plugin
+# Neuralab Branding plugin
 
 Adds Neuralab branding to WordPress dashboard and login.
