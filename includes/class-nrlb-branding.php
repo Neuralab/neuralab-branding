@@ -233,7 +233,7 @@ final class NRLB_Branding {
       .login h1 a {
       background-image: url( <?php echo NRLB_BRANDING_DIR_URL . '/assets/img/neuralab-logo.svg'; ?> ) !important;
       background-repeat: no-repeat !important;
-      background-size: 290px 62px !important;
+      background-size: 300px 40px !important;
       background-position: center !important;
       width: 100% !important;
     }
