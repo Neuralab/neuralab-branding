@@ -150,6 +150,15 @@ final class NRLB_Branding {
   }
 
   /**
+   * Get Neuralab site copy.
+   *
+   * @return string
+   */
+  public function get_nrlb_url_copy() {
+    return esc_html__( 'a.neuralab.site', 'nrlb-branding' );
+  }
+
+  /**
    * Remove WordPress logo from admin bar.
    *
    * @param  object $wp_admin_bar WP_Admin_Bar object.
@@ -200,7 +209,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function admin_footer_text( $text ) {
-    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank">' . __( 'A Neuralab site', 'nrlb-branding' ) . '</a></span>';
+    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank">' . $this->get_nrlb_url_copy() . '</a></span>';
   }
 
   /**
@@ -220,7 +229,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function login_headertext( $login_headertext ) {
-    return __( 'A Neuralab site', 'nrlb-branding' );
+    return $this->get_nrlb_url_copy();
   }
 
 
