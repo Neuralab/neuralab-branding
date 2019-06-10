@@ -159,6 +159,18 @@ final class NRLB_Branding {
   }
 
   /**
+   * Get Neuralab site link.
+   *
+   * @return string
+   */
+  public function a_nrlb_site() {
+    $url  = $this->get_nrlb_url();
+    $copy = $this->get_nrlb_url_copy();
+
+    return apply_filters( 'nrlb_branding_a_nrlb_site', '<a class="a-nrlb-site" target="_blank" href="' . esc_url( $url ) . '">' . esc_html( $copy ) . '</a>', $url, $copy );
+  }
+
+  /**
    * Remove WordPress logo from admin bar.
    *
    * @param  object $wp_admin_bar WP_Admin_Bar object.
