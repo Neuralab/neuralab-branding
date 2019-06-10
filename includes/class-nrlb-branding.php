@@ -155,7 +155,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function get_nrlb_url_copy() {
-    return esc_html__( 'a.neuralab.site', 'nrlb-branding' );
+    return __( 'a.neuralab.site', 'nrlb-branding' );
   }
 
   /**
@@ -209,7 +209,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function admin_footer_text( $text ) {
-    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank">' . $this->get_nrlb_url_copy() . '</a></span>';
+    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank">' . esc_html( $this->get_nrlb_url_copy() ) . '</a></span>';
   }
 
   /**
@@ -229,7 +229,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function login_headertext( $login_headertext ) {
-    return $this->get_nrlb_url_copy();
+    return esc_html( $this->get_nrlb_url_copy() );
   }
 
 
