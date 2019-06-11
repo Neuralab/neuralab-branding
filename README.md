@@ -5,6 +5,7 @@ Adds Neuralab branding to WordPress dashboard and login.
 ## Instructions
 
 There are two ways to add the plugin:
+
 1. Download option - Download the plugin from [the repo](https://bitbucket.org/neuralab/neuralab-branding/downloads/).
 __Note:__ Don't forget to rename the folder of the plugin to `neuralab-branding` since BitBucket adds extra stuff to the plugin folder name.
 2. Clone option - Clone the plugin (`git clone git@bitbucket.org:neuralab/neuralab-branding.git)` to `wp-content/plugins` folder.
