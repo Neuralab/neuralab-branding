@@ -188,7 +188,7 @@ final class NRLB_Branding {
     $wp_admin_bar->add_node(
       [
         'id'    => 'nrlb-logo',
-        'title' => '<span class="ab-icon">' . file_get_contents( NRLB_BRANDING_DIR_PATH . '/assets/img/neuralab-logo-sm.svg' ) . '</span>', // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+        'title' => '<span class="ab-icon">' . file_get_contents( NRLB_BRANDING_DIR_PATH . '/assets/img/neuralab-logo-sm.svg' ) . '</span><span class="screen-reader-text">' . esc_html( $this->get_nrlb_url_copy() ) . '</span>', // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
         'href'  => esc_url( $this->get_nrlb_url() ),
         'meta'  => [ 'target' => '_blank' ],
       ]
