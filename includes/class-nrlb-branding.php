@@ -202,12 +202,15 @@ final class NRLB_Branding {
     ?>
     <style type="text/css">
       #wpadminbar #wp-admin-bar-nrlb-logo > .ab-item .ab-icon {
-        height: 20px;
-        width: 20px;
         margin-right: 0 !important;
-        padding-top: 7px !important;
       }
-      #wpadminbar #wp-admin-bar-nrlb-logo > .ab-item .ab-icon svg * {
+      #wpadminbar #wp-admin-bar-nrlb-logo > .ab-item .ab-icon svg {
+        position: relative;
+        top: 2px;
+        display: block;
+        float: left;
+        width:  20px;
+        height: 20px;
         fill: currentColor;
       }
     </style>
