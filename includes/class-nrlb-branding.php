@@ -167,7 +167,7 @@ final class NRLB_Branding {
     $url  = $this->get_nrlb_url();
     $copy = $this->get_nrlb_url_copy();
 
-    return apply_filters( 'nrlb_branding_a_nrlb_site', '<a class="a-nrlb-site" target="_blank" href="' . esc_url( $url ) . '">' . esc_html( $copy ) . '</a>', $url, $copy );
+    return apply_filters( 'nrlb_branding_a_nrlb_site', '<a class="a-nrlb-site" target="_blank" rel="noopener" href="' . esc_url( $url ) . '">' . esc_html( $copy ) . '</a>', $url, $copy );
   }
 
   /**
@@ -224,7 +224,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function admin_footer_text( $text ) {
-    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank">' . esc_html( $this->get_nrlb_url_copy() ) . '</a></span>';
+    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank" rel="noopener">' . esc_html( $this->get_nrlb_url_copy() ) . '</a></span>';
   }
 
   /**
