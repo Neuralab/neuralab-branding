@@ -30,8 +30,10 @@ To add the _"a.neuralab.site"_ link to your themes footer place this to the desi
 ```php
   <?php
     function pg_a_nrlb_site( $link, $url, $copy ) {
-      return '<a class="my-class" href="' . esc_url( $url ) . '">' . esc_html( $copy ) . '</a>';
+      return '<a class="my-class" rel="noopener" href="' . esc_url( $url ) . '">' . esc_html( $copy ) . '</a>';
     }
     add_filter( 'nrlb_branding_a_nrlb_site', 'pg_a_nrlb_site', 10, 3 );
   ?>
 ```
+
+__Note:__ Don't forget to leave the `rel="noopener"` on the `<a>` tag if you need to filter the markup.
