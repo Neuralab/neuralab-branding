@@ -6,6 +6,10 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.0.3 =
+* Update plugin-update-checker library to 4.9.
+* Add rel="noopener" to all the links.
+
 = 1.0.2 =
 * Update plugin-update-checker library to 4.7.
 
