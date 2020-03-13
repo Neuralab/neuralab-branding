@@ -6,7 +6,6 @@
  * License: MIT License
  * Author: development@neuralab.net
  * Author URI: http://www.neuralab.net
- * Text Domain: nrlb-branding
  */
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.

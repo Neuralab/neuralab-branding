@@ -85,9 +85,6 @@ final class NRLB_Branding {
     register_activation_hook( NRLB_BRANDING_ROOT_FILE, [ $this, 'activate' ] );
     register_deactivation_hook( NRLB_BRANDING_ROOT_FILE, [ $this, 'deactivate' ] );
 
-    // Load text domain.
-    add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
-
     // Plugin hooks.
     // Admin branding.
     add_filter( 'admin_bar_menu', [ $this, 'remove_wp_logo_from_admin_bar' ], 100 );
@@ -116,13 +113,6 @@ final class NRLB_Branding {
     if ( ! current_user_can( 'activate_plugins' ) ) {
       return false;
     }
-  }
-
-  /**
-   * Load text domain.
-   */
-  public function load_textdomain() {
-    load_plugin_textdomain( 'nrlb-branding', false, dirname( plugin_basename( NRLB_BRANDING_ROOT_FILE ) ) . '/languages/' );
   }
 
   /**
