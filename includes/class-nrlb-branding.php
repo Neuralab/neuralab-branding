@@ -158,7 +158,7 @@ final class NRLB_Branding {
    * @return string
    */
   public function get_nrlb_url_copy() {
-    return __( 'a.neuralab.site', 'nrlb-branding' );
+    return 'a.neuralab.site';
   }
 
   /**
