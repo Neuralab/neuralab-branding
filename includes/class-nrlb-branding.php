@@ -176,7 +176,7 @@ final class NRLB_Branding {
   /**
    * Remove WordPress logo from admin bar.
    *
-   * @param  object $wp_admin_bar WP_Admin_Bar object.
+   * @param object $wp_admin_bar WP_Admin_Bar object.
    */
   public function remove_wp_logo_from_admin_bar( $wp_admin_bar ) {
     $wp_admin_bar->remove_node( 'wp-logo' );
