@@ -86,7 +86,7 @@ final class NRLB_Branding {
     register_deactivation_hook( NRLB_BRANDING_ROOT_FILE, [ $this, 'deactivate' ] );
 
     // Load text domain.
-    add_action( 'init', [ $this, 'load_textdomain' ], 0 );
+    add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
 
     // Plugin hooks.
     // Admin branding.
