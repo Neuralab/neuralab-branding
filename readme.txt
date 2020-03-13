@@ -6,6 +6,11 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.0.5 =
+* Remove text domain since we don't have anything to translate.
+* Rename some methods to make them more readable.
+* Cleanup code comments.
+
 = 1.0.4 =
 * Add rel="noopener" to admin bar link.
 
