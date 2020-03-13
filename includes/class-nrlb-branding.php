@@ -95,8 +95,8 @@ final class NRLB_Branding {
     add_action( 'wp_before_admin_bar_render', [ $this, 'style_admin_bar_menu' ] );
     add_filter( 'admin_footer_text', [ $this, 'admin_footer_text' ], PHP_INT_MAX );
     // Login branding.
-    add_filter( 'login_headerurl', [ $this, 'login_headerurl' ], 100 );
-    add_filter( 'login_headertext', [ $this, 'login_headertext' ], 100 );
+    add_filter( 'login_headerurl', [ $this, 'login_header_url' ], 100 );
+    add_filter( 'login_headertext', [ $this, 'login_header_text' ], 100 );
     add_action( 'login_enqueue_scripts', [ $this, 'login_logo_style' ], PHP_INT_MAX );
   }
 
@@ -239,17 +239,17 @@ final class NRLB_Branding {
    * @param  string $login_header_url
    * @return string
    */
-  public function login_headerurl( $login_header_url ) {
+  public function login_header_url( $login_header_url ) {
     return esc_url( $this->get_nrlb_url() );
   }
 
   /**
    * Login header text.
    *
-   * @param  string $login_headertext
+   * @param  string $login_header_text
    * @return string
    */
-  public function login_headertext( $login_headertext ) {
+  public function login_header_text( $login_header_text ) {
     return esc_html( $this->get_nrlb_url_copy() );
   }
 
