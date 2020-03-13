@@ -125,6 +125,9 @@ final class NRLB_Branding {
     load_plugin_textdomain( 'nrlb-branding', false, dirname( plugin_basename( NRLB_BRANDING_ROOT_FILE ) ) . '/languages/' );
   }
 
+  /**
+   * Enable plugin updates from BitBucket repository.
+   */
   public function update() {
     $update = Puc_v4_Factory::buildUpdateChecker(
       'https://bitbucket.org/neuralab/neuralab-branding',
