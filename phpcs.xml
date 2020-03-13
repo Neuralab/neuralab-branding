@@ -35,6 +35,9 @@
     <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
     <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
 
+    <!-- Enable short array -->
+    <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+
     <!-- other comment excludes -->
     <exclude name="Squiz.Commenting.FunctionComment" />
     <exclude name="Squiz.Commenting.VariableComment" />
