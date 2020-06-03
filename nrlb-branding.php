@@ -23,9 +23,9 @@ if ( ! class_exists( 'NRLB_Branding' ) ) {
 /**
  * Init the plugin.
  *
- * @return object Instance of NRLB_Branding class.
+ * @return NRLB_Branding Instance of NRLB_Branding class.
  */
-function nrlb_branding() {
+function nrlb_branding() : NRLB_Branding {
   return NRLB_Branding::get_instance();
 }
 
