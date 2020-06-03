@@ -87,13 +87,13 @@ final class NRLB_Branding {
 
     // Plugin hooks.
     // Admin branding.
-    add_filter( 'admin_bar_menu', [ $this, 'remove_wp_logo_from_admin_bar' ], 100 );
-    add_action( 'admin_bar_menu', [ $this, 'admin_bar_menu' ], 1 );
-    add_action( 'wp_before_admin_bar_render', [ $this, 'style_admin_bar_menu' ] );
+    add_action( 'admin_bar_menu', [ $this, 'admin_bar_remove_wp_logo' ], 100 );
+    add_action( 'admin_bar_menu', [ $this, 'admin_bar_add_nrlb_logo' ], 10 );
+    add_action( 'wp_before_admin_bar_render', [ $this, 'admin_bar_nrlb_logo_style' ], PHP_INT_MAX );
     add_filter( 'admin_footer_text', [ $this, 'admin_footer_text' ], PHP_INT_MAX );
     // Login branding.
-    add_filter( 'login_headerurl', [ $this, 'login_header_url' ], 100 );
-    add_filter( 'login_headertext', [ $this, 'login_header_text' ], 100 );
+    add_filter( 'login_headerurl', [ $this, 'login_header_url' ], PHP_INT_MAX );
+    add_filter( 'login_headertext', [ $this, 'login_header_text' ], PHP_INT_MAX );
     add_action( 'login_enqueue_scripts', [ $this, 'login_logo_style' ], PHP_INT_MAX );
   }
 
@@ -138,7 +138,7 @@ final class NRLB_Branding {
    *
    * @return string
    */
-  public function get_nrlb_url() {
+  public function get_nrlb_url() : string {
     return 'https://www.neuralab.net';
   }
 
@@ -147,7 +147,7 @@ final class NRLB_Branding {
    *
    * @return string
    */
-  public function get_nrlb_url_copy() {
+  public function get_nrlb_url_copy() : string {
     return 'a.neuralab.site';
   }
 
@@ -156,7 +156,7 @@ final class NRLB_Branding {
    *
    * @return string
    */
-  public function a_nrlb_site() {
+  public function a_nrlb_site() : string {
     $url  = $this->get_nrlb_url();
     $copy = $this->get_nrlb_url_copy();
 
@@ -166,18 +166,18 @@ final class NRLB_Branding {
   /**
    * Remove WordPress logo from admin bar.
    *
-   * @param object $wp_admin_bar WP_Admin_Bar object.
+   * @param WP_Admin_Bar $wp_admin_bar Instance of WP_Admin_Bar class.
    */
-  public function remove_wp_logo_from_admin_bar( $wp_admin_bar ) {
+  public function admin_bar_remove_wp_logo( WP_Admin_Bar $wp_admin_bar ) {
     $wp_admin_bar->remove_node( 'wp-logo' );
   }
 
   /**
-   * Add admin bar menu.
+   * Add Neuralab logo to admin bar.
+   *
+   * @param WP_Admin_Bar $wp_admin_bar Instance of WP_Admin_Bar class.
    */
-  public function admin_bar_menu() {
-    global $wp_admin_bar;
-
+  public function admin_bar_add_nrlb_logo( WP_Admin_Bar $wp_admin_bar ) {
     $wp_admin_bar->add_node(
       [
         'id'    => 'nrlb-logo',
@@ -192,9 +192,9 @@ final class NRLB_Branding {
   }
 
   /**
-   * Admin bar menu CSS.
+   * Style Neuralab logo in admin bar.
    */
-  public function style_admin_bar_menu() {
+  public function admin_bar_nrlb_logo_style() {
     ?>
     <style type="text/css">
       #wpadminbar #wp-admin-bar-nrlb-logo > .ab-item .ab-icon {
@@ -219,8 +219,10 @@ final class NRLB_Branding {
    * @param  string $text
    * @return string
    */
-  public function admin_footer_text( $text ) {
-    return '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank" rel="noopener">' . esc_html( $this->get_nrlb_url_copy() ) . '</a></span>';
+  public function admin_footer_text( string $text ) : string {
+    $text = '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank" rel="noopener">' . esc_html( $this->get_nrlb_url_copy() ) . '</a></span>';
+
+    return $text;
   }
 
   /**
@@ -229,23 +231,27 @@ final class NRLB_Branding {
    * @param  string $login_header_url
    * @return string
    */
-  public function login_header_url( $login_header_url ) {
-    return esc_url( $this->get_nrlb_url() );
+  public function login_header_url( string $login_header_url ) : string {
+    $login_header_url = esc_url( $this->get_nrlb_url() );
+
+    return $login_header_url;
   }
 
   /**
-   * Login header text.
+   * Edit login header text.
    *
    * @param  string $login_header_text
    * @return string
    */
-  public function login_header_text( $login_header_text ) {
-    return esc_html( $this->get_nrlb_url_copy() );
+  public function login_header_text( string $login_header_text ) : string {
+    $login_header_text = esc_html( $this->get_nrlb_url_copy() );
+
+    return $login_header_text;
   }
 
 
   /**
-   * Login logo CSS.
+   * Style Neuralab logo on login screen.
    */
   public function login_logo_style() {
     ?>
