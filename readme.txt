@@ -6,6 +6,14 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.0.6 =
+* Update composer packages.
+* Use type declarations and return type declarations.
+* Edit method names and descriptions.
+* Use a proper hook for adding Neuralab logo to the admin bar.
+* Use PHP_INT_MAX for action priority consistently.
+* Use a variable in filter callbacks.
+
 = 1.0.5 =
 * Remove text domain since we don't have anything to translate.
 * Rename some methods to make them more readable.
