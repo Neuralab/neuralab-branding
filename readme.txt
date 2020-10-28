@@ -6,6 +6,10 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.0.7 =
+Update plugin-update-checker library to 4.10.
+Use LF line endings.
+
 = 1.0.6 =
 * Update composer packages.
 * Use type declarations and return type declarations.
