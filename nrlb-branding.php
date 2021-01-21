@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Neuralab Branding
  * Description: Adds Neuralab branding to WordPress dashboard and login.
- * Version: 1.0.8
+ * Version: 1.0.9
  * License: MIT License
  * Author: development@neuralab.net
  * Author URI: http://www.neuralab.net

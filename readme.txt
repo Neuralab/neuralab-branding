@@ -6,6 +6,12 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.0.9 =
+* Remove private repo credentials.
+* Remove type declarations from all filter callback functions.
+* Use require for Composer autoloader.
+* Remove comment for including files.
+
 = 1.0.8 =
 * Fix missing list in Changelog.
 
