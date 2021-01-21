@@ -118,7 +118,7 @@ final class NRLB_Branding {
    */
   public function update() {
     $update = Puc_v4_Factory::buildUpdateChecker(
-      'https://bitbucket.org/neuralab/neuralab-branding',
+      'https://github.com/Neuralab/Neuralab-Branding',
       NRLB_BRANDING_ROOT_FILE,
       'nrlb-branding'
     );
