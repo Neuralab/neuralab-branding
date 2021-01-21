@@ -73,7 +73,7 @@ final class NRLB_Branding {
    */
   private function includes() {
     if ( file_exists( NRLB_BRANDING_DIR_PATH . 'vendor/autoload.php' ) ) {
-      require_once NRLB_BRANDING_DIR_PATH . 'vendor/autoload.php';
+      require NRLB_BRANDING_DIR_PATH . 'vendor/autoload.php';
     }
   }
 
