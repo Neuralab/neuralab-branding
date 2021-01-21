@@ -68,8 +68,6 @@ final class NRLB_Branding {
 
   /**
    * Add includes.
-   *
-   * To require a file add require_once NRLB_BRANDING_DIR_PATH . 'includes/path/to/file.php';
    */
   private function includes() {
     if ( file_exists( NRLB_BRANDING_DIR_PATH . 'vendor/autoload.php' ) ) {
