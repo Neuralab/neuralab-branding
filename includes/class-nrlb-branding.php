@@ -212,7 +212,7 @@ final class NRLB_Branding {
    * @param  string $text
    * @return string
    */
-  public function admin_footer_text( string $text ) : string {
+  public function admin_footer_text( $text ) : string {
     $text = '<span id="footer-thankyou"><a href="' . esc_url( $this->get_nrlb_url() ) . '" target="_blank" rel="noopener">' . esc_html( $this->get_nrlb_url_copy() ) . '</a></span>';
 
     return $text;
@@ -224,7 +224,7 @@ final class NRLB_Branding {
    * @param  string $login_header_url
    * @return string
    */
-  public function login_header_url( string $login_header_url ) : string {
+  public function login_header_url( $login_header_url ) : string {
     $login_header_url = esc_url( $this->get_nrlb_url() );
 
     return $login_header_url;
@@ -236,7 +236,7 @@ final class NRLB_Branding {
    * @param  string $login_header_text
    * @return string
    */
-  public function login_header_text( string $login_header_text ) : string {
+  public function login_header_text( $login_header_text ) : string {
     $login_header_text = esc_html( $this->get_nrlb_url_copy() );
 
     return $login_header_text;
