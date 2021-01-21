@@ -6,6 +6,10 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.0.10 =
+* Use GitHub for plugin updates.
+* Update installation instructions to reference GitHub.
+
 = 1.0.9 =
 * Remove private repo credentials.
 * Remove type declarations from all filter callback functions.
