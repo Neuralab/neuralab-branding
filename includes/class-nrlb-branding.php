@@ -124,13 +124,6 @@ final class NRLB_Branding {
       NRLB_BRANDING_ROOT_FILE,
       'nrlb-branding'
     );
-
-    $update->setAuthentication(
-      [
-        'consumer_key'    => '***REMOVED***',
-        'consumer_secret' => '***REMOVED***',
-      ]
-    );
   }
 
   /**
