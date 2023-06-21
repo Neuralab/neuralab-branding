@@ -114,7 +114,7 @@ final class NRLB_Branding {
 	}
 
 	/**
-	 * Enable plugin updates from BitBucket repository.
+	 * Enable plugin updates from GitHub repository.
 	 */
 	public function update() {
 		$update = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
