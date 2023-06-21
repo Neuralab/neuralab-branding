@@ -6,7 +6,7 @@
  * License: MIT License
  * Author: development@neuralab.net
  * Author URI: http://www.neuralab.net
- * Requires at least: 6.0
+ * Requires at least: 6.2.2
  * Requires PHP: 8.0
  */
 
