@@ -6,6 +6,8 @@
  * License: MIT License
  * Author: development@neuralab.net
  * Author URI: http://www.neuralab.net
+ * Requires at least: 6.0
+ * Requires PHP: 8.0
  */
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
