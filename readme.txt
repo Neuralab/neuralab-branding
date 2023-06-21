@@ -6,6 +6,13 @@ Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
 
+= 1.1.0 =
+* Set required WordPress version to 6.2.2.
+* Fix wrong comment that references Bitbucket.
+* Update Plugin Update Checker Library to 5.1.
+* Add minimum WordPress and PHP versions in plugin header.
+* Update coding standards.
+
 = 1.0.10 =
 * Use GitHub for plugin updates.
 * Update installation instructions to reference GitHub.
