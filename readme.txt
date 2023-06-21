@@ -1,5 +1,5 @@
 === Neuralab Branding ===
-Requires at least: 6.0
+Requires at least: 6.2.2
 Tested up to: 6.2.2
 Stable tag: 1.1.1
 Requires PHP: 8.0
