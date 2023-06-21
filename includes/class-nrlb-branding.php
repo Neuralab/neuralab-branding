@@ -117,11 +117,15 @@ final class NRLB_Branding {
 	 * Enable plugin updates from BitBucket repository.
 	 */
 	public function update() {
-		$update = Puc_v4_Factory::buildUpdateChecker(
-			'https://github.com/Neuralab/Neuralab-Branding',
+		$update = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+			'https://github.com/Neuralab/neuralab-branding',
 			NRLB_BRANDING_ROOT_FILE,
 			'nrlb-branding'
 		);
+
+		$update->setBranch( 'master' );
+
+		$update->getVcsApi()->enableReleaseAssets();
 	}
 
 	/**
