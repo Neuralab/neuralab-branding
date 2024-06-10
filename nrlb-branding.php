@@ -8,7 +8,7 @@
  * Author: development@neuralab.net
  * Author URI: https://www.neuralab.net
  * Requires at least: 6.5
- * Requires PHP: 8.0
+ * Requires PHP: 8.1
  */
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
