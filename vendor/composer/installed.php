@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.1.x-dev',
-        'version' => '1.1.9999999.9999999-dev',
-        'reference' => '75f3e6e129550fa492de315d8e70931ce87930e0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '8b096adf51ff45c316eee99cd8f4ed1c1932dd0a',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,18 +11,18 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.1.x-dev',
-            'version' => '1.1.9999999.9999999-dev',
-            'reference' => '75f3e6e129550fa492de315d8e70931ce87930e0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '8b096adf51ff45c316eee99cd8f4ed1c1932dd0a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'yahnis-elsts/plugin-update-checker' => array(
-            'pretty_version' => 'v5.1',
-            'version' => '5.1.0.0',
-            'reference' => '48b03e93c9c2587f9276dce00ce2b6d94c1190d2',
+            'pretty_version' => 'v5.4',
+            'version' => '5.4.0.0',
+            'reference' => 'e8e53e6d98e37fa7c895c93417f52e3775494715',
             'type' => 'library',
             'install_path' => __DIR__ . '/../yahnis-elsts/plugin-update-checker',
             'aliases' => array(),
