@@ -1,6 +1,6 @@
 === Neuralab Branding ===
-Requires at least: 6.2.2
-Tested up to: 6.2.2
+Requires at least: 6.5
+Tested up to: 6.5
 Stable tag: 1.1.2
 Requires PHP: 8.0
 License: MIT License
