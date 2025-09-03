@@ -1,7 +1,7 @@
 === Neuralab Branding ===
 Requires at least: 6.5
 Tested up to: 6.5
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires PHP: 8.1
 License: MIT License
 Adds Neuralab branding to WordPress dashboard and login.
@@ -10,6 +10,9 @@ Adds Neuralab branding to WordPress dashboard and login.
 Visit [the repo](https://bitbucket.org/neuralab/neuralab-branding/).
 
 == Changelog ==
+
+= 1.1.4 =
+* Use main branch for updates.
 
 = 1.1.3 =
 * Update Plugin Update Checker Library to 5.4.
