@@ -123,7 +123,7 @@ final class NRLB_Branding {
 			'nrlb-branding'
 		);
 
-		$update->setBranch( 'master' );
+		$update->setBranch( 'main' );
 
 		$update->getVcsApi()->enableReleaseAssets();
 	}
